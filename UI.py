@@ -19,19 +19,62 @@ class CubeGrid(Canvas):
 
 
         self.grid = [[0, 0, 0] for _ in range(3)]
+        #
         self.squares = [[0,0,0] for _ in range(3)]
+        #  0
+        # 1 2
+        #  3
         self.edges = [[] for _ in range(4)]
         # 0 1
         # 2 3
-        # = i/2 + 2*j
         self.corners = [[] for _ in range(4)]
         for i in range(3):
             for j in range(3):
-                self.squares[i][j] = self.create_rectangle(bord+offset+side*i, bord+offset+side*j,
-                                                           bord-offset+side+side*i, bord-offset+side+side*j,
+                x_0 = bord+offset+side*i
+                y_0 = bord+offset+side*j
+                x_1 = bord-offset+side+side*i
+                y_1 = bord-offset+side+side*j
+
+                self.squares[i][j] = self.create_rectangle(x_0, y_0,
+                                                           x_1, y_1,
                                                            fill="yellow", tags=str(i)+str(j))
 
                 self.tag_bind(self.squares[i][j], '<ButtonPress-1>', self.onObjectClick)
+                # edge case
+                if i == 1 and j == 0:
+                    self.edges[0] = self.create_rectangle(bord + offset + side * i, bord + offset + side * j - edge,
+                                                          bord - offset + side + side * i, bord + offset + side * j,
+                                                          fill="black")
+                if i==0 and j == 1:
+                    self.edges[1] = self.create_rectangle(bord+offset+side*i-edge, bord+offset+side*j,
+                                                          bord+side*i+offset, bord-offset+side+side*j,
+                                                          fill="black")
+                if i== 2 and j == 1:
+                    self.edges[2] = self.create_rectangle(bord-offset+side+side*i, bord+offset+side*j,
+                                                          bord-offset+side+side*i+edge, bord-offset+side+side*j,
+                                                          fill="black")
+                if i == 1 and j == 2:
+                    self.edges[3] = self.create_rectangle(bord+offset+side*i, bord-offset+side+side*j,
+                                                          bord-offset+side+side*i, bord-offset+side+side*j+edge,
+                                                          fill="black")
+
+                #corner cases
+                if i == 0 and j == 0:
+                    points = [x_0, y_0,
+                              x_1, y_0,
+                              x_1, y_0-edge,
+                              x_0-edge, y_0-edge]
+                    temp1 = self.create_polygon(points, fill="black")
+                    self.corners[0].append(temp1)
+
+                if i == 2 and j == 0:
+                    points = [x_0, y_0,
+                              x_1, y_0,
+                              x_1+edge, y_0-edge,
+                              x_0,y_0-edge]
+                    temp = self.create_polygon(points, fill="black")
+                    self.corners[1].append(temp)
+
 
         self.pack()
 
@@ -72,6 +115,9 @@ class CubeGrid(Canvas):
         for i in range(3):
             for j in range(3):
                 if event.widget.find_closest(event.x, event.y)[0] == self.squares[i][j]:
+                    if i==1 and j == 1:
+                        return
+
                     self.changeValue(i, j)
 
                     return
