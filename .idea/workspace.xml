@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34e363b5-bdcb-48a6-bfe3-20494cc5e861" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CubeGrid.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/UI.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UI.py" afterPath="$PROJECT_DIR$/UI.py" />
     </list>
     <ignored path="bs4test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -36,7 +37,7 @@
       <file leaf-file-name="PullAlgs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PullAlgs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
+            <state relative-caret-position="110">
               <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
@@ -45,12 +46,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UI.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/UI.py">
+      <file leaf-file-name="CubeGrid.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CubeGrid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="385">
+              <caret line="193" column="24" lean-forward="true" selection-start-line="193" selection-start-column="24" selection-end-line="193" selection-end-column="24" />
+              <folding>
+                <element signature="e#6602#6839#0" expanded="false" />
+                <element signature="e#6881#7117#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,6 +103,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -114,14 +119,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
-  <component name="RunManager" selected="Python.UI">
+  <component name="RunManager" selected="Python.CubeGrid">
     <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -168,7 +172,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="bs4test" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/UI.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Penguin\Desktop\bs4test\CubeGrid.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CubeGrid" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="bs4test" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CubeGrid.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -307,16 +328,18 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.test" />
       <item index="1" class="java.lang.String" itemvalue="Python.PullAlgs" />
       <item index="2" class="java.lang.String" itemvalue="Python.UI" />
+      <item index="3" class="java.lang.String" itemvalue="Python.CubeGrid" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.UI" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.PullAlgs" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.CubeGrid" />
+        <item index="1" class="java.lang.String" itemvalue="Python.UI" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.PullAlgs" />
       </list>
     </recent_temporary>
   </component>
@@ -362,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482137431935</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="working on adding corners">
+      <created>1482141765174</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1482141765174</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -413,15 +443,45 @@
     <MESSAGE value="changed source to algdb" />
     <MESSAGE value="working on UI" />
     <MESSAGE value="boxes of UI change color&#10;working on adding edge and corners" />
-    <option name="LAST_COMMIT_MESSAGE" value="boxes of UI change color&#10;working on adding edge and corners" />
+    <MESSAGE value="working on adding corners" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on adding corners" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PullAlgs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CubeGrid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="63" column="39" lean-forward="false" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+          <folding>
+            <element signature="e#6602#6839#0" expanded="false" />
+            <element signature="e#6881#7117#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -440,11 +500,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UI.py">
+    <entry file="file://$PROJECT_DIR$/CubeGrid.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#6602#6839#0" expanded="false" />
+            <element signature="e#6881#7117#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -473,14 +536,14 @@
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PullAlgs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
+        <state relative-caret-position="110">
           <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
@@ -488,11 +551,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UI.py">
+    <entry file="file://$PROJECT_DIR$/CubeGrid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="385">
+          <caret line="193" column="24" lean-forward="true" selection-start-line="193" selection-start-column="24" selection-end-line="193" selection-end-column="24" />
+          <folding>
+            <element signature="e#6602#6839#0" expanded="false" />
+            <element signature="e#6881#7117#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
