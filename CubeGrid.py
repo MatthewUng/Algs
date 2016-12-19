@@ -46,20 +46,20 @@ class CubeGrid(Canvas):
                 self.tag_bind(self.squares[i][j], '<ButtonPress-1>', self.onObjectClick)
                 # edge case
                 if i == 1 and j == 0:
-                    self.edges[0] = self.create_rectangle(bord + offset + side * i, bord + offset + side * j - edge,
-                                                          bord - offset + side + side * i, bord + offset + side * j,
+                    self.edges[0] = self.create_rectangle(x_0, y_0-edge,
+                                                          x_1, y_0,
                                                           fill="grey")
                 if i==0 and j == 1:
-                    self.edges[1] = self.create_rectangle(bord+offset+side*i-edge, bord+offset+side*j,
-                                                          bord+side*i+offset, bord-offset+side+side*j,
+                    self.edges[1] = self.create_rectangle(x_0-edge, y_0,
+                                                          x_0, y_1,
                                                           fill="grey")
                 if i== 2 and j == 1:
-                    self.edges[2] = self.create_rectangle(bord-offset+side+side*i, bord+offset+side*j,
-                                                          bord-offset+side+side*i+edge, bord-offset+side+side*j,
+                    self.edges[2] = self.create_rectangle(x_1, y_0,
+                                                          x_1+edge, y_1,
                                                           fill="grey")
                 if i == 1 and j == 2:
-                    self.edges[3] = self.create_rectangle(bord+offset+side*i, bord-offset+side+side*j,
-                                                          bord-offset+side+side*i, bord-offset+side+side*j+edge,
+                    self.edges[3] = self.create_rectangle(x_0, y_1,
+                                                          x_1, y_1+edge,
                                                           fill="grey")
 
                 #corner cases
