@@ -4,7 +4,7 @@ import urllib
 import urllib2
 import cStringIO
 import re
-from creatingdb import *
+from rotation import *
 
 
 YELLOW = (254, 254, 0, 255)
@@ -71,8 +71,8 @@ def parse_image(im):
     else:
         out[2][2] = 2
 
-    temp = (tuple(out[i]) for i in range(3))
-    return temp
+    return out
+
 
 
 
@@ -101,6 +101,7 @@ for row in table.find_all("tr"):
 
         pattern = parse_image(img)
         for thing in rotations(pattern):
+            print thing
             hash[thing] = int(match.group(1))
         print "after hash"
 

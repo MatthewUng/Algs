@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34e363b5-bdcb-48a6-bfe3-20494cc5e861" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/creatingdb.py" afterPath="$PROJECT_DIR$/rotation.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/creatingdb.py" afterPath="$PROJECT_DIR$/creatingdb.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parseImages.py" afterPath="$PROJECT_DIR$/parseImages.py" />
     </list>
     <ignored path="bs4test.iws" />
@@ -62,8 +62,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="creatingdb.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/creatingdb.py">
+      <file leaf-file-name="rotation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rotation.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
               <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
@@ -75,11 +75,10 @@
       <file leaf-file-name="parseImages.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parseImages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="363">
+              <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <element signature="e#215#1484#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -105,8 +104,8 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/UI.py" />
         <option value="$PROJECT_DIR$/CubeGrid.py" />
-        <option value="$PROJECT_DIR$/parseImages.py" />
         <option value="$PROJECT_DIR$/creatingdb.py" />
+        <option value="$PROJECT_DIR$/parseImages.py" />
       </list>
     </option>
   </component>
@@ -232,7 +231,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="bs4test" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/creatingdb.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Penguin\Desktop\bs4test\rotation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -475,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482195983844</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="work">
+      <created>1482209487748</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1482209487748</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -489,9 +495,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2141724" sideWeight="0.49324325" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2141724" sideWeight="0.49324325" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -530,7 +536,8 @@
     <MESSAGE value="colors changes correctly" />
     <MESSAGE value="improved style" />
     <MESSAGE value="working on parsing images&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on parsing images&#10;" />
+    <MESSAGE value="work" />
+    <option name="LAST_COMMIT_MESSAGE" value="work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -667,7 +674,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/creatingdb.py">
+    <entry file="file://$PROJECT_DIR$/rotation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="29" column="30" lean-forward="false" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
@@ -677,11 +684,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parseImages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        <state relative-caret-position="363">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#215#1484#0" expanded="false" />
           </folding>
         </state>
       </provider>
