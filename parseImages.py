@@ -100,9 +100,14 @@ for row in table.find_all("tr"):
 
 
         pattern = parse_image(img)
+        print "hashing..."
         for thing in rotations(pattern):
             print thing
             hash[thing] = int(match.group(1))
-        print "after hash"
 
 
+
+with open("orientation_data.p", "wb") as FILE:
+    pickle.dump(hash, FILE, protocol=pickle.HIGHEST_PROTOCOL)
+
+FILE.close()
