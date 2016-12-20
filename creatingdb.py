@@ -5,7 +5,7 @@ def rotations(L):
     def rotate(In):
         """returns a copy of the 3x3 2-d array rotated once counter-clockwise"""
         #copies In
-        L = [In[i][:] for i in range(3)]
+        L = [list(In[i]) for i in range(3)]
         # rotate the corners once
         temp = L[0][0]
         L[0][0] = L[0][2]
@@ -18,25 +18,25 @@ def rotations(L):
         L[0][1] = L[1][2]
         L[1][2] = L[2][1]
         L[2][1] = temp
-        return L
+
+        tup = (tuple(L[0]), tuple(L[1]), tuple(L[2]))
+
+        return tup
+
+    new_L = (tuple(L[0]), tuple(L[1]), tuple(L[2]))
     out = []
-    out.append(L)
+    out.append(new_L)
     for i in range(3):
         out.append(rotate(out[-1]))
     return out
 
-OLL_1 = [[1, 1, 2],
-         [0, 0, 0]
-         [2, 1, 2]]
-
-
 if __name__ == "__main__":
-    exit()
+
     test =[[1,2,3],
            [4,5,6],
            [7,8,9]]
     out = rotations(test)
-
+    print type(out)
     for value in out:
         for line in value:
             print line
