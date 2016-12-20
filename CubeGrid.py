@@ -1,10 +1,10 @@
 from tkinter import *
 
 class CubeGrid(Canvas):
-    squareSize = 150
-    edgeSize = 25
+    squareSize = 100
+    edgeSize = 10
     border = 50
-    offset = 5
+    offset = 2
 
     def __init__(self, master):
         # init values for convenience
@@ -215,6 +215,7 @@ class CubeGrid(Canvas):
             for j in range(3):
                 if event.widget.find_closest(event.x, event.y)[0] == self.squares[i][j]:
                     # center square never changes color
+
                     if i==1 and j == 1:
                         return
 
