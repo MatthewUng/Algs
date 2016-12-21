@@ -6,18 +6,17 @@ class MainWindow():
     orientation_data_file = r"orientation_data.p"
 
     def __init__(self, master):
-        print "here"
-        self.title = Label(master, text="OLL Algorithms")
-        self.title.pack(ipady="10")
+        self.title = Label(master, text="OLL Algorithms", font=("26",))
+        self.title.grid(row=0, column=0, columnspan=2, pady=10)
 
-        self.grid = CubeGrid.CubeGrid(master)
-        self.grid.pack(side=LEFT)
+        self.cubegrid = CubeGrid.CubeGrid(master)
+        self.cubegrid.grid(row=1, column=0, rowspan=2)
 
-        self.outputtext = Label(master)
-        self.outputtext.pack(side=RIGHT)
+        self.outputtext = Label(master, font=("28",))
+        self.outputtext.grid(row=1, column=1)
 
         self.algsbutton = Button(master, text="submit", command=self.algsOnClick)
-        self.algsbutton.pack(padx="20", side=RIGHT)
+        self.algsbutton.grid(row=2, column=1, padx=120)
 
         self.hash = None
         self.parsepatterns()
@@ -31,7 +30,7 @@ class MainWindow():
         self.hash = pickle.loads(s)
 
     def getgrid(self):
-        return self.grid.getValues()
+        return self.cubegrid.getValues()
 
     def algsOnClick(self):
         print "clicked"
@@ -39,7 +38,10 @@ class MainWindow():
         for line in values:
             print line
 
-        outputalgs = "put algs here"
+        outputalgs = """R U R' U R d' R U' R' F'
+R' U' R U' R' d R' U R B
+R' U' R U' R' U F' U F R
+R U R' U R U' y R U' R' F'"""
         self.outputtext.config(text=outputalgs)
 
 if __name__ == "__main__":

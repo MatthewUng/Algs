@@ -21,7 +21,7 @@ class CubeGrid(Canvas):
         # 0 1 2
         # 3 4 5
         # 6 4 8
-        self.grid = [[0, 0, 0] for _ in range(3)]
+        self.orientation = [[0, 0, 0] for _ in range(3)]
 
         #contains actual square objects
         self.squares = [[None,None,None] for _ in range(3)]
@@ -127,31 +127,31 @@ class CubeGrid(Canvas):
 
     def flip_edge(self, i, j):
         index = self.map_edge(i, j)
-        if self.grid[i][j] == 0:
+        if self.orientation[i][j] == 0:
 
             self.itemconfig(self.edges[index], fill="yellow")
             self.itemconfig(self.squares[i][j], fill="grey")
-            self.grid[i][j] = 1
+            self.orientation[i][j] = 1
 
         else:
             self.itemconfig(self.edges[index], fill="grey")
             self.itemconfig(self.squares[i][j], fill="yellow")
-            self.grid[i][j] = 0
+            self.orientation[i][j] = 0
 
     def flip_corner(self, i, j):
         index = self.map_corner(i, j)
-        if self.grid[i][j] == 0:
+        if self.orientation[i][j] == 0:
             self.itemconfig(self.squares[i][j], fill="grey")
             self.itemconfig(self.corners[index][0], fill="yellow")
-            self.grid[i][j] = 1
-        elif self.grid[i][j] == 1:
+            self.orientation[i][j] = 1
+        elif self.orientation[i][j] == 1:
             self.itemconfig(self.corners[index][0], fill="grey")
             self.itemconfig(self.corners[index][1], fill="yellow")
-            self.grid[i][j] = 2
-        elif self.grid[i][j] == 2:
+            self.orientation[i][j] = 2
+        elif self.orientation[i][j] == 2:
             self.itemconfig(self.squares[i][j], fill="yellow")
             self.itemconfig(self.corners[index][1], fill="grey")
-            self.grid[i][j] = 0
+            self.orientation[i][j] = 0
         else:
             print "error in CubeGrid.flip_corner()"
 
@@ -192,7 +192,7 @@ class CubeGrid(Canvas):
         else: return True
 
     def getValues(self):
-        return self.grid
+        return self.orientation
 
     def changeValue(self,i,j):
         if self.is_edge(i,j):
