@@ -123,7 +123,7 @@ class CubeGrid(Canvas):
                     temp = self.create_polygon(points, fill="grey", outline="black")
                     self.corners[3].append(temp)
 
-        self.pack()
+
 
     def flip_edge(self, i, j):
         index = self.map_edge(i, j)
@@ -226,5 +226,6 @@ class CubeGrid(Canvas):
 
 if __name__ == '__main__':
     top = Tk()
-    CubeGrid(top)
+    grid = CubeGrid(top)
+    grid.pack()
     mainloop()
