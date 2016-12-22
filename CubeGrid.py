@@ -1,4 +1,7 @@
-from tkinter import *
+try:
+    from Tkinter import *
+except ImportError:
+    from tkinter import *
 
 class CubeGrid(Canvas):
     squareSize = 100

@@ -1,4 +1,8 @@
-from tkinter import *
+try:
+    from Tkinter import *
+except ImportError:
+    from tkinter import *
+
 import CubeGrid
 import cPickle as pickle
 
