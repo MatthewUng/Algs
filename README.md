@@ -2,4 +2,4 @@
 
 Program to present possible Algorithms to the user.
 
-![alt-text](github.com/MathewUng/Algs/example.png "example")
+![alt text](https://github.com/MatthewUng/Algs/blob/master/example.png "example")
