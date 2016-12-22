@@ -57,29 +57,24 @@ class MainWindow():
 
     def algsOnClick(self):
         values = self.getgrid()
-        for line in values:
-            print line
-
         try:
             ollnumber = self.OLL_pattern_dict[converttotuple(values)]
         except KeyError:
-            print "Error"
             self.olllabel.config(text="Invalid pattern")
             self.outputtext.config(text="")
             return
-        print "OLL: ", ollnumber
 
         olltext = "OLL: " + str(ollnumber)
         self.olllabel.config(text=olltext)
 
         outputalgs = self.OLL_algorithms[ollnumber]
-        print "output: ", outputalgs
         self.outputtext.config(text=outputalgs)
         self.cubegrid.change_orientation(self.OLL_standard[ollnumber])
 
 if __name__ == "__main__":
 
     top = Tk()
+    top.wm_title("Algs")
     window = MainWindow(top)
     mainloop()
 
