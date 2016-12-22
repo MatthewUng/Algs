@@ -34,9 +34,9 @@ for row in soup.find("table").find_all("tr"):
         l = map(str.strip, l)
 
         s = '\n'.join(l)
-        hash[index] = l
+        hash[index] = s
         print s
-exit()
+
 with open("OLL_algorithm_data.p", 'wb') as FILE:
     pickle.dump(hash, FILE, pickle.HIGHEST_PROTOCOL)
 

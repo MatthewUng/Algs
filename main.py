@@ -2,8 +2,15 @@ from tkinter import *
 import CubeGrid
 import cPickle as pickle
 
+def converttotuple(l):
+    out = list()
+    for List in l:
+        out.append(tuple(List))
+    return tuple(out)
+
 class MainWindow():
     orientation_data_file = r"orientation_data.p"
+    OLL_algorithm_data = r"OLL_algorithm_data.p"
 
     def __init__(self, master):
         self.title = Label(master, text="OLL Algorithms", font=("26",))
@@ -12,36 +19,50 @@ class MainWindow():
         self.cubegrid = CubeGrid.CubeGrid(master)
         self.cubegrid.grid(row=1, column=0, rowspan=2)
 
-        self.outputtext = Label(master, font=("28",))
-        self.outputtext.grid(row=1, column=1)
+        self.olllabel = Label(master, font=("28",))
+        self.olllabel.grid(row=1,column=1)
 
-        self.algsbutton = Button(master, text="submit", command=self.algsOnClick)
-        self.algsbutton.grid(row=2, column=1, padx=120)
+        self.outputtext = Label(master, font=("28",), width=40)
+        self.outputtext.grid(row=2, column=1, padx=20, sticky='n')
 
-        self.hash = None
+        self.algsbutton = Button(master, text="submit", command=self.algsOnClick, font=("14",))
+        self.algsbutton.grid(row=3, column=0, columnspan=2, pady=20)
+
+        self.OLL_pattern_dict = None
+        self.OLL_algorithms =None
         self.parsepatterns()
 
         self.getgrid()
 
-
     def parsepatterns(self):
         datafile = open(MainWindow.orientation_data_file, 'rb')
         s = datafile.read()
-        self.hash = pickle.loads(s)
+        self.OLL_pattern_dict = pickle.loads(s)
+        datafile = open(MainWindow.OLL_algorithm_data, 'rb')
+        s = datafile.read()
+        self.OLL_algorithms = pickle.loads(s)
 
     def getgrid(self):
         return self.cubegrid.getValues()
 
     def algsOnClick(self):
-        print "clicked"
         values = self.getgrid()
         for line in values:
             print line
 
-        outputalgs = """R U R' U R d' R U' R' F'
-R' U' R U' R' d R' U R B
-R' U' R U' R' U F' U F R
-R U R' U R U' y R U' R' F'"""
+        try:
+            ollnumber = self.OLL_pattern_dict[converttotuple(values)]
+        except KeyError:
+            print "Error"
+            self.olllabel.config(text="Invalid pattern")
+            return
+        print "OLL: ", ollnumber
+
+        olltext = "OLL: " + str(ollnumber)
+        self.olllabel.config(text=olltext)
+
+        outputalgs = self.OLL_algorithms[ollnumber]
+        print "output: ", outputalgs
         self.outputtext.config(text=outputalgs)
 
 if __name__ == "__main__":
