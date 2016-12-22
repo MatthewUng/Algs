@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34e363b5-bdcb-48a6-bfe3-20494cc5e861" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OLL_algorithm_data.p" afterPath="$PROJECT_DIR$/OLL_algorithm_data.p" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/standard_orientation.p" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PullAlgs.py" afterPath="$PROJECT_DIR$/PullAlgs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CubeGrid.py" afterPath="$PROJECT_DIR$/CubeGrid.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parseImages.py" afterPath="$PROJECT_DIR$/parseImages.py" />
     </list>
     <ignored path="bs4test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,8 +51,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="27" column="91" lean-forward="false" selection-start-line="27" selection-start-column="91" selection-end-line="27" selection-end-column="91" />
+            <state relative-caret-position="440">
+              <caret line="77" column="68" lean-forward="false" selection-start-line="77" selection-start-column="68" selection-end-line="77" selection-end-column="68" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -62,12 +63,11 @@
       <file leaf-file-name="CubeGrid.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CubeGrid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="192" column="0" lean-forward="false" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+            <state relative-caret-position="407">
+              <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
               <folding>
                 <element signature="e#5131#5538#0" expanded="false" />
-                <element signature="e#6345#6582#0" expanded="false" />
-                <element signature="e#6624#6860#0" expanded="false" />
+                <element signature="e#7117#7353#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -86,10 +86,11 @@
       <file leaf-file-name="parseImages.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parseImages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+            <state relative-caret-position="253">
+              <caret line="98" column="41" lean-forward="true" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#212#1435#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -118,10 +119,10 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/UI.py" />
         <option value="$PROJECT_DIR$/creatingdb.py" />
-        <option value="$PROJECT_DIR$/CubeGrid.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/parseImages.py" />
         <option value="$PROJECT_DIR$/PullAlgs.py" />
+        <option value="$PROJECT_DIR$/CubeGrid.py" />
+        <option value="$PROJECT_DIR$/parseImages.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
@@ -414,9 +415,9 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.PullAlgs" />
-        <item index="2" class="java.lang.String" itemvalue="Python.CubeGrid" />
-        <item index="3" class="java.lang.String" itemvalue="Python.parseImages" />
+        <item index="1" class="java.lang.String" itemvalue="Python.parseImages" />
+        <item index="2" class="java.lang.String" itemvalue="Python.PullAlgs" />
+        <item index="3" class="java.lang.String" itemvalue="Python.CubeGrid" />
         <item index="4" class="java.lang.String" itemvalue="Python.creatingdb" />
       </list>
     </recent_temporary>
@@ -547,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482370222977</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="program correctly analyzes input and returns correct algorithms">
+      <created>1482371885926</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1482371885926</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -561,9 +569,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2141724" sideWeight="0.49324325" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2141724" sideWeight="0.49324325" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -629,7 +637,8 @@
     <MESSAGE value="edit README&#10;" />
     <MESSAGE value="test" />
     <MESSAGE value="created OLL_algorithm_data.p" />
-    <option name="LAST_COMMIT_MESSAGE" value="created OLL_algorithm_data.p" />
+    <MESSAGE value="program correctly analyzes input and returns correct algorithms" />
+    <option name="LAST_COMMIT_MESSAGE" value="program correctly analyzes input and returns correct algorithms" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -662,8 +671,7 @@
           <caret line="192" column="0" lean-forward="true" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
           <folding>
             <element signature="e#5131#5538#0" expanded="false" />
-            <element signature="e#6345#6582#0" expanded="false" />
-            <element signature="e#6624#6860#0" expanded="false" />
+            <element signature="e#7117#7353#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -703,6 +711,7 @@
           <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#212#1435#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -731,8 +740,7 @@
           <caret line="217" column="0" lean-forward="false" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
           <folding>
             <element signature="e#5131#5538#0" expanded="false" />
-            <element signature="e#6345#6582#0" expanded="false" />
-            <element signature="e#6624#6860#0" expanded="false" />
+            <element signature="e#7117#7353#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -751,6 +759,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#212#1435#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -779,8 +788,7 @@
           <caret line="63" column="39" lean-forward="false" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
           <folding>
             <element signature="e#5131#5538#0" expanded="false" />
-            <element signature="e#6345#6582#0" expanded="false" />
-            <element signature="e#6624#6860#0" expanded="false" />
+            <element signature="e#7117#7353#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -809,8 +817,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#5131#5538#0" expanded="false" />
-            <element signature="e#6345#6582#0" expanded="false" />
-            <element signature="e#6624#6860#0" expanded="false" />
+            <element signature="e#7117#7353#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -873,28 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parseImages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CubeGrid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="192" column="0" lean-forward="false" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
-          <folding>
-            <element signature="e#5131#5538#0" expanded="false" />
-            <element signature="e#6345#6582#0" expanded="false" />
-            <element signature="e#6624#6860#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PullAlgs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -905,10 +890,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/parseImages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="98" column="41" lean-forward="true" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#212#1435#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CubeGrid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding>
+            <element signature="e#5131#5538#0" expanded="false" />
+            <element signature="e#7117#7353#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="91" lean-forward="false" selection-start-line="27" selection-start-column="91" selection-end-line="27" selection-end-column="91" />
+        <state relative-caret-position="440">
+          <caret line="77" column="68" lean-forward="false" selection-start-line="77" selection-start-column="68" selection-end-line="77" selection-end-column="68" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>

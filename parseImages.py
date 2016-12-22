@@ -10,7 +10,6 @@ from rotation import *
 YELLOW = (254, 254, 0, 255)
 GREY = (64, 64, 64, 255)
 
-
 def parse_image(im):
     # edges
     out = [[0, 0, 0] for _ in range(3)]
@@ -73,9 +72,6 @@ def parse_image(im):
 
     return out
 
-
-
-
 url = """http://algdb.net/Set/OLL"""
 
 file = urllib2.urlopen(url)
@@ -98,14 +94,11 @@ for row in table.find_all("tr"):
         img_file = cStringIO.StringIO(urllib2.urlopen(imgurl).read())
         img = Image.open(img_file)
 
-
         pattern = parse_image(img)
         print "hashing..."
-        for thing in rotations(pattern):
-            print thing
-            hash[thing] = int(match.group(1))
+        #for thing in rotations(pattern):
+        #    print thing
+        hash[int(match.group(1))] = pattern
 
-
-
-with open("orientation_data.p", "wb") as FILE:
+with open("standard_orientation.p", "wb") as FILE:
     pickle.dump(hash, FILE, protocol=pickle.HIGHEST_PROTOCOL)

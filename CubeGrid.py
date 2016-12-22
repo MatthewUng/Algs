@@ -155,6 +155,22 @@ class CubeGrid(Canvas):
         else:
             print "error in CubeGrid.flip_corner()"
 
+    def change_orientation(self, input):
+        for i in [0, 2]:
+            for j in [0,2]:
+                while self.orientation[i][j] != input[i][j]:
+                    self.flip_corner(i,j)
+
+        for pair in [(0,1), (1,0), (2,1), (1,2)]:
+            i = pair[0]
+            j = pair[1]
+            while self.orientation[i][j] != input[i][j]:
+                self.flip_edge(i,j)
+
+    def reset(self):
+        temp = [[0,0,0] for _ in range(3)]
+        self.change_orientation(temp)
+
     def map_edge(self, i, j):
         if i == 1 and j == 0:
             return 0
