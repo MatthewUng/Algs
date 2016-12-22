@@ -109,5 +109,3 @@ for row in table.find_all("tr"):
 
 with open("orientation_data.p", "wb") as FILE:
     pickle.dump(hash, FILE, protocol=pickle.HIGHEST_PROTOCOL)
-
-FILE.close()
