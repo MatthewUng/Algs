@@ -18,9 +18,9 @@ class CubeGrid(Canvas):
 
         wh = 2* bord + 3* side
 
-        Canvas.__init__(self, master,width=wh, height=wh)
+        Canvas.__init__(self, master, width=wh, height=wh)
 
-        #contains state of the squares (reprensented by ints)
+        #contains state of the squares (represented by ints)
         # 0 1 2
         # 3 4 5
         # 6 4 8
@@ -174,6 +174,7 @@ class CubeGrid(Canvas):
         temp = [[0,0,0] for _ in range(3)]
         self.change_orientation(temp)
 
+    """
     def map_edge(self, i, j):
         if i == 1 and j == 0:
             return 0
@@ -208,7 +209,7 @@ class CubeGrid(Canvas):
     def is_corner(self, i, j ):
         if i == 1 or j == 1:
             return False
-        else: return True
+        else: return True"""
 
     def getValues(self):
         return self.orientation
@@ -223,8 +224,6 @@ class CubeGrid(Canvas):
             return
         else:
             print "error in CubeGrid.changeValue()"
-
-
 
     def onObjectClick(self, event):
         #print event.x, event.y
