@@ -27,6 +27,7 @@ def map_corner(i, j):
     else:
         return -1
 
+
 def is_edge(i,j):
     if i == 1 and j == 1:
         return False
@@ -34,10 +35,12 @@ def is_edge(i,j):
         return False
     else: return True
 
+
 def is_corner(i, j ):
     if i == 1 or j == 1:
         return False
     else: return True
+
 
 class BaseGrid(Canvas):
     squareSize = 100
@@ -95,8 +98,7 @@ class BaseGrid(Canvas):
                     self.edges[3] = self.create_rectangle(x_0, y_1,
                                                           x_1, y_1+edge,
                                                           fill="grey")
-
-                #corner cases
+                # corner cases
                 if i == 0 and j == 0:
                     points = [x_0, y_1,
                               x_0, y_0,
@@ -171,20 +173,6 @@ class BaseGrid(Canvas):
     def setCornerColor(self, i, j, color):
         self.itemconfig(self.corners[i][j], fill=color)
 
-    def onObjectClick(self, event):
-        #print event.x, event.y
-        #print event.widget
-        #print event.widget.find_closest(event.x,event.y)
-        for i in range(3):
-            for j in range(3):
-                if event.widget.find_closest(event.x, event.y)[0] == self.squares[i][j]:
-                    # center square never changes color
-
-                    if i==1 and j == 1:
-                        return
-                    self.setSquareColor(i, j, "green")
-
-                    return
 
 if __name__ == "__main__":
     master = Tk()

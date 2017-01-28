@@ -3,7 +3,7 @@ try:
 except ImportError:
     from tkinter import *
 
-import CubeGrid
+import OLLGrid
 import cPickle as pickle
 
 def converttotuple(l):
@@ -21,7 +21,7 @@ class MainWindow():
         self.title = Label(master, text="OLL Algorithms", font=("26",))
         self.title.grid(row=0, column=0, columnspan=2, pady=10)
 
-        self.cubegrid = CubeGrid.CubeGrid(master)
+        self.cubegrid = OLLGrid.OLLGrid(master)
         self.cubegrid.grid(row=1, column=0, rowspan=2)
 
         self.olllabel = Label(master, font=("28",))
