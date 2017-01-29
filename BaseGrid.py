@@ -58,6 +58,9 @@ class BaseGrid(Canvas):
         wh = 2 * bord + 3 * side
         Canvas.__init__(self, master, width=wh, height=wh)
 
+        # 00 01 02
+        # 10 11 12
+        # 20 21 22
         self.squares = [[None, None, None] for _ in range(3)]
 
         #  0
