@@ -13,9 +13,9 @@ def converttotuple(l):
     return tuple(out)
 
 class MainWindow():
-    orientation_data_file = r"orientation_data.p"
-    OLL_algorithm_data = r"OLL_algorithm_data.p"
-    standard_orientation_file = r"standard_orientation.p"
+    orientation_data_file = r"data/orientation_data.p"
+    OLL_algorithm_data = r"data/OLL_algorithm_data.p"
+    standard_orientation_file = r"data/standard_orientation.p"
 
     def __init__(self, master):
         self.title = Label(master, text="OLL Algorithms", font=("26",))

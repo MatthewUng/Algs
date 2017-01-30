@@ -12,6 +12,7 @@ class PLLGrid(BaseGrid):
         BaseGrid.__init__(self, master)
         self.selected = None
         self.type = None
+        self.orientations = None
 
         self.reset()
         self.setOnClick(self.onObjectClick)
