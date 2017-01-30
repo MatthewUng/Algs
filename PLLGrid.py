@@ -57,9 +57,9 @@ class PLLGrid(BaseGrid):
                     else: return
 
     def reset(self):
-        self.orientations = [['BO', 'O', 'OG'],
-                             ['B', None, 'G'],
-                             ['RB', 'R', 'GR']]
+        self.orientations = [['bo', 'o', 'og'],
+                             ['b', None, 'g'],
+                             ['rb', 'r', 'gr']]
 
         self.setEdgeColor(0,'orange')
         self.setEdgeColor(1, 'blue')

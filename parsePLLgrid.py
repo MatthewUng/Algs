@@ -11,7 +11,7 @@ RED = [238, 0, 0]
 ORANGE = [255, 161, 0]
 GREEN = [0, 216, 0]
 
-def getColor(r,g,b):
+def getColor(r,g,b,x):
     if [r,g,b] == BLUE:
         return "b"
     elif [r,g,b] == RED:
@@ -25,6 +25,7 @@ def getColor(r,g,b):
 
 
 class PLLimageParser:
+    site_url = ""
 
     def __init__(self):
         pass
@@ -34,10 +35,10 @@ class PLLimageParser:
         out = [[None for _ in range(3)] for _ in range(3)]
 
         # edges
-        edges = {(1,0):[50,15],
-                 (0,1):[15,50],
-                 (2,0):[85,50],
-                 (0,2):[50,85]}
+        edges = {(1,0):(15,50),
+                 (0,1):(50,15),
+                 (2,1):(50,85),
+                 (1,2):(85,50)}
         for index, pixel in edges.items():
             color = getColor(*im.getpixel(pixel))
             if color:
@@ -52,14 +53,14 @@ class PLLimageParser:
                      'g':'gr',
                      'o':'og'}
 
-        corners = {(0,0) : [15,30],
-                   (2,0) : [70, 15],
-                   (0,2) : [30,85],
-                   (2,2) : [85,70]}
+        corners = {(0,0) : (15,30),
+                   (2,0) : (30,85),
+                   (0,2) : (70,15),
+                   (2,2) : (85,70)}
         for index, pixel in corners.items():
             color = getColor(*im.getpixel(pixel))
             if color:
-                out[index[0]][index[1]] = color
+                out[index[0]][index[1]] = color_map[color]
             else:
                 print "error in parse()"
                 raise Exception

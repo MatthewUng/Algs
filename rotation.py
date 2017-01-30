@@ -1,5 +1,38 @@
 import cPickle as pickle
 
+def colorRotation(L):
+    order = {'r':'b',
+             'b':'o',
+             'o':'g',
+             'g':'r'}
+
+    out = list()
+
+    def rotate(In):
+        out = list()
+        for line in In:
+            new_line = list()
+            for piece in line:
+                if not piece:
+                    new_line.append(None)
+                    continue
+                temp = ""
+                for i in range(len(piece)):
+                    temp += order[piece[i]]
+                new_line.append(temp)
+            out.append(tuple(new_line))
+
+        return tuple(out)
+
+    first = list()
+    for line in L:
+        first.append(tuple(line))
+    out.append(tuple(first))
+    for _ in range(3):
+        out.append(rotate(out[-1]))
+    return out
+
+
 def rotations(L):
     """takes in a 3x3 grid and returns a list of all 4 possible outcomes from rotation"""
     def rotate(In):
@@ -31,6 +64,18 @@ def rotations(L):
     return out
 
 if __name__ == "__main__":
+
+    perm = [['bo', 'o', 'og'],
+            ['b', None, 'g'],
+            ['rb', 'r', 'gr']]
+    out = colorRotation(perm)
+
+    for rotation in out:
+        for line in rotation:
+            print line
+
+        print '\n'
+    exit()
 
     test =[[1,2,3],
            [4,5,6],
