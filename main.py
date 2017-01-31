@@ -22,24 +22,30 @@ class MainWindow():
     standard_PLL_file = r"data/standard_PLL.p"
 
     def __init__(self, master):
+        self.master = master
         self.mode = None
 
         self.title = Label(master, font=("26",))
-        self.title.grid(row=0, column=0, columnspan=2, pady=10)
+        self.title.grid(row=0, column=0, columnspan=2, pady=(20,10))
 
         self.cubegrid = None
 
-        self.alglabel = Label(master, font=("28",))
-        self.alglabel.grid(row=1,column=1)
+        self.strvar = StringVar()
+        self.strvar.set("OLL Algorithms")
+        self.menu = OptionMenu(master, self.strvar, "OLL Algorithms", "PLL Algorithms", command=self.changeMode)
+        self.menu.grid(row=1, column=1, sticky='n', pady=(30,0))
 
-        self.outputtext = Label(master, font=("28",), width=45)
-        self.outputtext.grid(row=2, column=1, padx=20, sticky='n')
+        self.alglabel = Label(master, font=("28",))
+        self.alglabel.grid(row=2,column=1, sticky='n', pady=(0,0))
+
+        self.outputtext = Label(master, font=("28",), width=40)
+        self.outputtext.grid(row=3, column=1, padx=20, sticky='n', pady=(0,10))
 
         self.resetButton = Button(master, text="Reset", command=self.reset, font=("14",))
-        self.resetButton.grid(row=3, column=0, pady=20)
+        self.resetButton.grid(row=4, column=0, pady=20)
 
         self.algsbutton = Button(master, text="submit", command=self.algsOnClick, font=("14",))
-        self.algsbutton.grid(row=3, column=1, pady=20)
+        self.algsbutton.grid(row=4, column=1, pady=20)
 
         self.orientations_OLL = None
         self.orientations_PLL = None
@@ -53,26 +59,34 @@ class MainWindow():
         self.standard = None
         self.orientations = None
 
-        self.setUpPLL(master)
-        #self.setUpOLL(master)
+        #self.setUpPLL(master)
+        self.setUpOLL(master)
 
     def setUpOLL(self, master):
         self.mode = "oll"
-        self.title.config(text="OLL algorithms")
-        self.cubegrid =OLLGrid.OLLGrid(master)
-        self.cubegrid.grid(row=1, column=0, rowspan=2)
+        self.title.config(text="OLL Algorithms")
+        self.cubegrid = OLLGrid.OLLGrid(master)
+        self.cubegrid.grid(row=1, column=0, rowspan=3)
         self.algorithms = self.algorithms_OLL
         self.standard = self.standard_OLL
         self.orientations = self.orientations_OLL
 
     def setUpPLL(self, master):
         self.mode = "pll"
-        self.title.config(text="PLL algorithms")
+        self.title.config(text="PLL Algorithms")
         self.cubegrid = PLLGrid.PLLGrid(master)
-        self.cubegrid.grid(row=1, column=0, rowspan=2)
+        self.cubegrid.grid(row=1, column=0, rowspan=3)
         self.algorithms = self.algorithms_PLL
         self.standard = self.standard_PLL
         self.orientations = self.orientations_PLL
+
+    def changeMode(self, event):
+        if self.strvar.get() == "OLL Algorithms" and self.mode == "pll":
+            self.setUpOLL(self.master)
+        elif self.strvar.get() == "PLL Algorithms" and self.mode == "oll":
+            self.setUpPLL(self.master)
+        else:
+            pass
 
     def parsepatterns(self):
         datafile = open(MainWindow.orientation_OLL_file, 'rb')
