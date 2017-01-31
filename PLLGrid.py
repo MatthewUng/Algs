@@ -56,6 +56,9 @@ class PLLGrid(BaseGrid):
 
                     else: return
 
+    def setPattern(self, pattern):
+        pass
+
     def reset(self):
         self.orientations = [['bo', 'o', 'og'],
                              ['b', None, 'g'],

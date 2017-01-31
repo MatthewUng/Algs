@@ -45,6 +45,27 @@ class PLLimageParser:
             d[name] = alg_str
         save(d, "algorithms_PLL.p")
 
+    def createOrientations(self):
+        d = dict()
+        with open("data/standard_PLL.p", "rb") as f:
+            s = f.read()
+            algs = pickle.loads(s)
+
+        for name, pattern in algs.items():
+
+            rotation_list = rotations(pattern)
+
+            all = list()
+            for rotate in rotation_list:
+                colors = colorRotation(rotate)
+                all.extend(colors)
+
+            for pattern in all:
+                d[pattern] = name
+
+        save(d, "orientations_PLL.p")
+
+
 
     def createStandard(self, algs):
         d = dict()
@@ -112,7 +133,6 @@ class PLLimageParser:
 
 if __name__ == "__main__":
     parser = PLLimageParser()
-    algs = parser.AlgData()
-    parser.createAlgs(algs)
+    parser.createOrientations()
 
 
