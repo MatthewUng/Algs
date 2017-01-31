@@ -48,7 +48,7 @@ class OLLGrid(BaseGrid):
         else:
             print "error in OLLGrid.flip_corner()"
 
-    def change_orientation(self, input):
+    def setPattern(self, input):
         for i in [0, 2]:
             for j in [0,2]:
                 while self.orientation[i][j] != input[i][j]:
@@ -62,7 +62,7 @@ class OLLGrid(BaseGrid):
 
     def reset(self):
         temp = [[0,0,0] for _ in range(3)]
-        self.change_orientation(temp)
+        self.setPattern(temp)
 
     def getValues(self):
         return self.orientation

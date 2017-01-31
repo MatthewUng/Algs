@@ -43,9 +43,8 @@ class PLLimageParser:
             #print alg
             name = alg[0].string
             alg_str = alg[2].renderContents()
-            print alg[0].string
-            print alg[2].renderContents()
-            d[name] = alg_str
+            temp_algs =  map(str.strip, alg_str.split('<br/>'))
+            d[name] = "\n".join(temp_algs[:len(temp_algs)-1])
         save(d, "algorithms_PLL.p")
 
     def createOrientations(self):
@@ -67,8 +66,6 @@ class PLLimageParser:
                 d[pattern] = name
 
         save(d, "orientations_PLL.p")
-
-
 
     def createStandard(self, algs):
         d = dict()
@@ -136,6 +133,8 @@ class PLLimageParser:
 
 if __name__ == "__main__":
     parser = PLLimageParser()
-    parser.createOrientations()
+    algs = parser.AlgData()
+    parser.createAlgs(algs)
+
 
 
