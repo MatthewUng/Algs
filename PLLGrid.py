@@ -80,9 +80,6 @@ class PLLGrid(BaseGrid):
                     self.setCornerColor(index,0,color_map[pattern[i][j][0]])
                     self.setCornerColor(index,1,color_map[pattern[i][j][1]])
                     self.orientations[i][j] = pattern[j][i]
-        for line in self.orientations:
-            print line
-
 
     def reset(self):
         self.orientations = [['bo', 'o', 'og'],
@@ -140,6 +137,9 @@ class PLLGrid(BaseGrid):
         else:
             print "error in PLLGrid.swapSquares"
             exit()
+
+    def getValues(self):
+        return self.orientations
 
 if __name__ == "__main__":
     root = Tk()
