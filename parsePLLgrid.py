@@ -3,8 +3,6 @@ from bs4 import BeautifulSoup
 import urllib
 import urllib2
 import cStringIO
-import cPickle as pickle
-import re
 from rotation import *
 
 BLUE = [0, 0, 242]
@@ -27,6 +25,11 @@ def getColor(r,g,b,x):
 def save(d, fname):
     with open(fname, "wb") as f:
         pickle.dump(d, f, protocol=pickle.HIGHEST_PROTOCOL)
+
+def unsave(fname):
+    with open(fname, "rb") as f:
+        d = pickle.loads(f.read())
+    return out
 
 class PLLimageParser:
     site_url = "http://algdb.net/Set/PLL"
