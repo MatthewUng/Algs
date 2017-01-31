@@ -37,7 +37,7 @@ for row in soup.find("table").find_all("tr"):
         hash[index] = s
         print s
 
-with open("OLL_algorithm_data.p", 'wb') as FILE:
+with open("algorithms_OLL.p", 'wb') as FILE:
     pickle.dump(hash, FILE, pickle.HIGHEST_PROTOCOL)
 
 

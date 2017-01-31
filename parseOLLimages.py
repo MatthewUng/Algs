@@ -100,5 +100,5 @@ for row in table.find_all("tr"):
         #    print thing
         hash[int(match.group(1))] = pattern
 
-with open("standard_orientation.p", "wb") as FILE:
+with open("standard_OLL.p", "wb") as FILE:
     pickle.dump(hash, FILE, protocol=pickle.HIGHEST_PROTOCOL)
