@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import urllib
 import urllib2
 import cStringIO
+import cPickle as pickle
 import re
 from rotation import *
 
@@ -23,13 +24,55 @@ def getColor(r,g,b,x):
     else:
         print "error in getColor()"
 
+def save(d, fname):
+    with open(fname, "wb") as f:
+        pickle.dump(d, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 class PLLimageParser:
-    site_url = ""
+    site_url = "http://algdb.net/Set/PLL"
 
     def __init__(self):
         pass
 
+    def createAlgs(self, algs):
+        d = dict()
+        for alg in algs:
+            #print alg
+            name = alg[0].string
+            alg_str = alg[2].renderContents()
+            print alg[0].string
+            print alg[2].renderContents()
+            d[name] = alg_str
+        save(d, "algorithms_PLL.p")
+
+
+    def createStandard(self, algs):
+        d = dict()
+        for alg in algs:
+            name = alg[0].string
+            img_url = alg[1].img['src']
+            img_url = urllib.quote(img_url, safe="%/:=&?~#+!$,;'@()*[]")
+            img_file = cStringIO.StringIO(urllib2.urlopen(img_url).read())
+            img = Image.open(img_file)
+
+            pattern = self.parse(img)
+            print name
+            for line in pattern:
+                print line
+            d[name] = pattern
+        save(d, "standard_PLL.p")
+
+    def AlgData(self):
+        file = urllib2.urlopen(PLLimageParser.site_url)
+        soup = BeautifulSoup(file, 'html.parser')
+
+        out = list()
+        table = soup.find("table")
+        for row in table.find_all("tr"):
+            data = row.find_all("td")
+            if len(data)>0:
+                out.append(data)
+        return out
 
     def parse(self, im):
         out = [[None for _ in range(3)] for _ in range(3)]
@@ -69,8 +112,7 @@ class PLLimageParser:
 
 if __name__ == "__main__":
     parser = PLLimageParser()
-    im = Image.open('img2.png')
+    algs = parser.AlgData()
+    parser.createAlgs(algs)
 
-    out = parser.parse(im)
-    for line in out:
-        print line
+
