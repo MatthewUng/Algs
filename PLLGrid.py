@@ -5,6 +5,8 @@ except ImportError:
 
 from BaseGrid import *
 
+import cPickle as pickle
+
 class PLLGrid(BaseGrid):
     selected_color = "light goldenrod"
 
@@ -61,24 +63,25 @@ class PLLGrid(BaseGrid):
                      'o':'orange',
                      'r':'red',
                      'g':'green'}
+
         for i in range(3):
             for j in range(3):
-                print i,j
-                print pattern[i][j]
 
                 if i == 1 and j == 1:
                     continue
 
                 elif is_edge(i,j):
-                    index = map_edge(i, j)
+                    index = map_edge(j, i)
                     self.setEdgeColor(index, color_map[pattern[i][j]])
-                    self.orientations[i][j] = pattern[i][j]
+                    self.orientations[i][j] = pattern[j][i]
 
                 elif is_corner(i,j):
-                    index = map_corner(i, j)
+                    index = map_corner(j, i)
                     self.setCornerColor(index,0,color_map[pattern[i][j][0]])
                     self.setCornerColor(index,1,color_map[pattern[i][j][1]])
-                    self.orientations[i][j] = pattern[i][j]
+                    self.orientations[i][j] = pattern[j][i]
+        for line in self.orientations:
+            print line
 
 
     def reset(self):
@@ -142,8 +145,16 @@ if __name__ == "__main__":
     root = Tk()
     grid = PLLGrid(root)
     grid.pack()
-    pattern = (('rb', 'b', 'gr'),
-               ('r', None, 'o'),
-               ('bo', 'g', 'og'))
+    with open("data/standard_PLL.p", 'rb') as f:
+        s = f.read()
+        d = pickle.loads(s)
+    pattern = d['Ua']
+    for line in pattern:
+        print line
+    #pattern = (('rb', 'b', 'gr'),
+    #           ('r', None, 'o'),
+    #           ('bo', 'g', 'og'))
+
     grid.setPattern(pattern)
+
     mainloop()
