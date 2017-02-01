@@ -4,7 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/PLLGrid.py" line="147" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34e363b5-bdcb-48a6-bfe3-20494cc5e861" name="Default" comment="OLL/PLL working" />
+    <list default="true" id="34e363b5-bdcb-48a6-bfe3-20494cc5e861" name="Default" comment="OLL/PLL working">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/example.png" afterPath="" />
+    </list>
     <ignored path="bs4test.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +40,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="46" column="55" lean-forward="false" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+            <state relative-caret-position="385">
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="e#78#92#0" expanded="true" />
                 <element signature="e#3050#3860#0" expanded="false" />
@@ -1226,8 +1228,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="46" column="55" lean-forward="false" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+        <state relative-caret-position="385">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
             <element signature="e#78#92#0" expanded="true" />
             <element signature="e#3050#3860#0" expanded="false" />
